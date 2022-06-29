@@ -2,6 +2,7 @@ import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import HtmlTestRunner
 
 @pytest.yield_fixture()
 def setupMethod():
@@ -63,7 +64,8 @@ def test_phoneRequirements(test_methodB):
     ram_Type = driver.find_element(by=By.XPATH,
                                    value='//*[@id="container"]/div/div[3]/div[1]/div[1]/div/div[1]/div/section[17]/div[2]/div/div[3]/div/label/div[2]').click()
 
-
+if __name__=='__main__':
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/Users/user/Desktop/guvi Project/reports'))
 
 
 
